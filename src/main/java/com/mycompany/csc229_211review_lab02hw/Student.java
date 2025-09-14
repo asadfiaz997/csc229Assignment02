@@ -4,13 +4,42 @@ package com.mycompany.csc229_211review_lab02hw;
  *
  * @author MoaathAlrajab
  */
-public class Student {
-	// ToDo 1: Make this class a child of Person
+// ToDo 1: Make this class a child of Person
+public class Student extends Person {
+
+	// GPA field (to store student's GPA)
+	private double gpa;
+    private String address;
+
+	//Constructor for Student class
+	 public Student(String name, int age) {
+        super(name, (short) age);  // parent constructor call
+    }
+
+	 // Getter & Setter for GPA
+    public double getGpa() {
+        return gpa;
+    }
+
+    public void setGpa(double gpa) {
+        this.gpa = gpa;
+    }
 	
-	// ToDo 2: Fix the resulting errors
 	
-	// ToDo 3: Add a field for GPA and create setter and getter
+	 @Override
+    public String getAddress() {
+        return address; 
+    }
 	
-	// ToDo 4: Add comments to your code
+	 @Override
+    public void setAddress() {
+        this.address = address; 
+    }
+
+	// toString method  Automatically called when we print the Student object
+	 @Override
+    public String toString() {
+        return "Name: " + getName() + ", Age: " + getAge() + ", GPA: " + gpa;
+    }
 
 }
