@@ -28,6 +28,7 @@ public class Student extends Person {
     @Override
     public String getAddress() {
         return address;
+	}
 
     @Override
     public void setAddress(String address) {
